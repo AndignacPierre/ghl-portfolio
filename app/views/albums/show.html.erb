@@ -1,0 +1,10 @@
+<h1><%= @album.title %></h1>
+<p><%= @album.description %></p>
+
+<h2>Photos in this Album</h2>
+<% @photos.each do |photo| %>
+  <div>
+    <h3><%= link_to photo.title, photo_path(photo) %></h3>
+    <%= image_tag photo.image %>
+  </div>
+<% end %>

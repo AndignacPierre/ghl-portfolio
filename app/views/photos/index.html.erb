@@ -1,0 +1,9 @@
+<h1>Photos</h1>
+
+<% @photos.each do |photo| %>
+  <div>
+    <h2><%= link_to photo.title, photo_path(photo) %></h2>
+    <%= image_tag photo.image %>
+    <p><%= photo.description %></p>
+  </div>
+<% end %>
