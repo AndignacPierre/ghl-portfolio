@@ -77,3 +77,6 @@ gem "simple_form"
 
 # Sass (Syntactically Awesome Stylesheets)
 gem "sassc-rails"
+
+# Photos
+gem "cloudinary"

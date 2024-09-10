@@ -1,9 +1,4 @@
 <h1>Photos</h1>
 
-<% @photos.each do |photo| %>
-  <div>
-    <h2><%= link_to photo.title, photo_path(photo) %></h2>
-    <%= image_tag photo.image %>
-    <p><%= photo.description %></p>
-  </div>
-<% end %>
+<%= cl_image_tag("13_jxws7b",
+      width: 400, height: 300, crop: :fill) %>
