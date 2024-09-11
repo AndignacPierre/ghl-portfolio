@@ -69,14 +69,11 @@ group :test do
   gem "selenium-webdriver"
 end
 
-# Bootstrap
-gem "bootstrap", "~> 5.2"
-
-# Simple form
-gem "simple_form"
-
 # Sass (Syntactically Awesome Stylesheets)
 gem "sassc-rails"
 
-# Photos
+gem "bootstrap", "~> 5.2"
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
 gem "cloudinary"
