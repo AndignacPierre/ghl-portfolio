@@ -1,7 +1,56 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=MedievalSharp&family=Metamorphous&family=Modern+Antiqua&display=swap');
+@import url('https://db.onlinewebfonts.com/c/cf9209cb40da7169670815cd8c1860c9?family=Self+Modern+Regular');
+@import url('https://db.onlinewebfonts.com/c/some_url_for_messina_sans_light');
+
+// Define font-family variables
+:root {
+  --framer-font-family: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif;
+  --framer-font-family-bold: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif;
+  --framer-font-family-italic: "Self Modern Italic", "Self Modern Italic Placeholder", sans-serif;
+  --framer-font-family-bold-italic: "Self Modern Italic", "Self Modern Italic Placeholder", sans-serif;
+
+  --framer-font-family-messina: "Messina Sans Web Light", "Messina Sans Web Light Placeholder", sans-serif;
+  --framer-font-size: 12px;
+  --framer-font-style: normal;
+  --framer-font-weight: 400;
+  --framer-letter-spacing: 0.04em;
+  --framer-line-height: 1.4em;
+  --framer-paragraph-spacing: 40px;
+  --framer-text-alignment: start;
+  --framer-text-color: var(--token-66565648-3305-49d9-9d69-65dfda08eb8c, #0a0a0a);
+  --framer-text-decoration: none;
+  --framer-text-transform: uppercase;
+}
 
 // Define fonts for body and headers
-$body-font: "Nunito", "Helvetica", "sans-serif";
-$headers-font: "Modern Antiqua", "Helvetica", "sans-serif";
+$body-font: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif;
+$headers-font: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif;
+
+// Apply to elements
+body, h1 {
+  font-family: var(--framer-font-family);
+}
+
+h2, h3 {
+  font-family: var(--framer-font-family-bold);
+}
+
+em {
+  font-family: var(--framer-font-family-italic);
+}
+
+strong {
+  font-family: var(--framer-font-family-bold-italic);
+}
+
+// Apply "Messina Sans Web Light" to navbar and specific titles
+.navbar, .navbar-title, h2.title-special {
+  font-family: var(--framer-font-family-messina);
+  font-size: var(--framer-font-size);
+  font-weight: var(--framer-font-weight);
+  letter-spacing: var(--framer-letter-spacing);
+  line-height: var(--framer-line-height);
+  text-transform: var(--framer-text-transform);
+  color: var(--framer-text-color);
+  text-decoration: var(--framer-text-decoration);
+}
