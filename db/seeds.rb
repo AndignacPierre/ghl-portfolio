@@ -8,8 +8,9 @@ puts "Creating photos"
 
 photo = Photo.create(
   title: "Photo 1",
-  description: "de très jolis tchoutchs",
-  image: "https://res.cloudinary.com/your_cloud_name/image/upload/v1234567890/13_jxws7b.jpg"
+  description: "mettre une description ici",
+  image: "https://res.cloudinary.com/ddwepm3lq/image/upload/v1234567890/13_jxws7b.jpg",
+  category: "pro"
 )
 
 puts "Created #{photo.title}"
