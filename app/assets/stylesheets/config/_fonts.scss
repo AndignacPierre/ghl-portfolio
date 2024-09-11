@@ -12,12 +12,12 @@
   --framer-font-family-messina: "Messina Sans Web Light", "Messina Sans Web Light Placeholder", sans-serif;
   --framer-font-size: 12px;
   --framer-font-style: normal;
-  --framer-font-weight: 400;
+  --framer-font-weight: 300;
   --framer-letter-spacing: 0.04em;
   --framer-line-height: 1.4em;
   --framer-paragraph-spacing: 40px;
   --framer-text-alignment: start;
-  --framer-text-color: var(--token-66565648-3305-49d9-9d69-65dfda08eb8c, #0a0a0a);
+  --framer-text-color: var(--token-66565648-3305-49d9-9d69-65dfda08eb8c, $dark-gray);
   --framer-text-decoration: none;
   --framer-text-transform: uppercase;
 }
@@ -27,16 +27,22 @@ $body-font: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif
 $headers-font: "Self Modern Regular", "Self Modern Regular Placeholder", sans-serif;
 
 // Apply to elements
-body, h1 {
-  font-family: var(--framer-font-family);
+h1 {
+  font-family: var(--framer-font-family-bold);
+  font-weight: 800 !important;
 }
 
 h2, h3 {
   font-family: var(--framer-font-family-bold);
 }
 
+body {
+  font-family: var(--framer-font-family);
+}
+
 em {
   font-family: var(--framer-font-family-italic);
+  font-weight: 300;
 }
 
 strong {

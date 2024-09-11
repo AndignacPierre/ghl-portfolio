@@ -3,8 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background: $body-bg;
-  border-bottom: 0.25px solid $dark-gray;
-  padding-bottom: 0px;
+  border-bottom: 0.2px solid $dark-gray;
   margin-bottom: 20px;
 }
 
@@ -12,6 +11,18 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+.ghl-brand {
+  font-family: var(--framer-font-family-messina);  /* Use the bold version of your custom font */
+  font-weight: 800;  /* Extra bold */
+  font-size: 1.75rem;  /* Adjust the size to your preference */
+  text-decoration: none;  /* Remove underline */
+  color: #000;  /* Ensure it matches your theme colors */
+}
+
+.navbar-brand:hover {
+  color: $dark-gray, 10%;  /* Optional hover effect */
 }
