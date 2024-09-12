@@ -9,4 +9,6 @@ class Photo < ApplicationRecord
   validates :title, presence: true
   validates :image, presence: true
   validates :category, inclusion: { in: %w[pro perso] }
+
+  mount_uploader :image, CloudinaryUploader
 end
