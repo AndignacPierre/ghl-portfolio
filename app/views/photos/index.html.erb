@@ -1,14 +1,20 @@
-<div class="container mt-2 ">
-  <div class="d-flex justify-content-center align-items-center mb-4">
-    <h1 class="ghl-brand" style="font-size: 2.75rem">
-      HANLU GONG
-    </h1>
+<div class="block-main">
+  <!-- Centered H1 at the top -->
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>
+        HANLU GONG
+      </h1>
+    </div>
   </div>
 
-  <div style="height: 100vh;">
-    <H2 style="width: 80%;">
-      <em>Hanlu Gong</em> is a photographer, graduated from the famous school of photography, Famu.
-    </H2>
-    <%= cl_image_tag("13_jxws7b", width: 400, height: 300, crop: :fill) %>
+  <!-- Images below the H1 -->
+  <div class="row justify-content-center align-items-center mt-4">
+    <div class="col-md-6 home-image-container">
+      <%= cl_image_tag("13_jxws7b") %>
+    </div>
+    <div class="col-md-6 home-image-container">
+      <%= cl_image_tag("13_jxws7b") %>
+    </div>
   </div>
 </div>

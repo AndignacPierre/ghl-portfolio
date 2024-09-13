@@ -28,8 +28,9 @@ $headers-font: "Self Modern Regular", "Self Modern Regular Placeholder", sans-se
 
 // Apply to elements
 h1 {
-  font-family: var(--framer-font-family-bold);
+  font-family: var(--framer-font-family-messina) !important;  /* Use the bold version of your custom font */
   font-weight: 800 !important;
+  color: #000;  /* Ensure it matches your theme colors */
 }
 
 h2, h3 {

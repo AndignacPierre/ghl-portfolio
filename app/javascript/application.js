@@ -2,6 +2,8 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// bootstrap
 import "bootstrap"
 import "@popperjs/core"
+
+import "../stylesheets/application.scss";
+

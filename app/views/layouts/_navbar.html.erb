@@ -9,15 +9,21 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link ms-2" href="<%= albums_path%>">Selected Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" href="<%= bio_path%>">Bio</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link ms-2" href="<%= info_path%>">Info</a>
-          </li>
+        <li class="nav-item dropdown" data-controller="dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Selected Work
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Professional</a></li>
+            <li><a class="dropdown-item" href="#">Personal</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ms-2" href="<%= bio_path %>">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ms-2" href="<%= info_path %>">Info</a>
+        </li>
       </ul>
     </div>
   </div>
