@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
-  def bio
-  end
+  def bio; end
 
-  def contact
-  end
+  def contact; end
 end
