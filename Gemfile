@@ -76,7 +76,7 @@ gem 'sassc-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 5.2'
-gem 'carrierwave'
 gem 'cloudinary'
+gem 'image_processing'
 gem 'font-awesome-sass', '~> 6.1'
 gem 'simple_form'
