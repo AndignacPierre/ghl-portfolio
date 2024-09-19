@@ -14,37 +14,45 @@ def create_photo(title, description, category, cloudinary_key)
     category: category
   )
 
-  # Define the Cloudinary base URL
-  cloudinary_base_url = 'https://res.cloudinary.com/ddwepm3lq/image/upload'
+  # First, save the photo without the image
+  if photo.save
+    puts "Created #{photo.title}."
 
-  # Use the Cloudinary key to attach the image
-  begin
-    image_url = "#{cloudinary_base_url}/#{cloudinary_key}.jpg"
-    puts "Attempting to attach image from URL: #{image_url}" # Debugging output
+    # Define the Cloudinary base URL
+    cloudinary_base_url = 'https://res.cloudinary.com/ddwepm3lq/image/upload'
 
-    # Attach the image
-    photo.image.attach(
-      io: URI.open(image_url),
-      filename: "#{cloudinary_key}.jpg",
-      content_type: 'image/jpg'
-    )
+    # Use the Cloudinary key to attach the image
+    begin
+      image_url = "#{cloudinary_base_url}/#{cloudinary_key}.jpg"
+      puts "Attempting to attach image from URL: #{image_url}"
 
-    if photo.image.attached?
-      puts "Created #{photo.title} with image attached."
-      photo.save!
-    else
-      puts "Image not attached for #{photo.title}."
-      photo.destroy
+      # Attach the image
+      photo.image.attach(
+        io: URI.open(image_url),
+        filename: "#{cloudinary_key}.jpg",
+        content_type: 'image/jpg'
+      )
+
+      if photo.image.attached?
+        puts "#{photo.title} image attached successfully."
+      else
+        puts "Image not attached for #{photo.title}. Deleting the photo."
+        photo.errors.full_messages
+        photo.destroy
+      end
+
+    rescue OpenURI::HTTPError => e
+      puts "Failed to attach image for #{photo.title} from #{image_url}: #{e.message}"
+      photo.destroy # Optionally remove the photo if image attachment fails
     end
-  rescue OpenURI::HTTPError => e
-    puts "Failed to attach image for #{photo.title} from #{image_url}: #{e.message}"
-    photo.destroy # Optionally remove the photo if image attachment fails
+  else
+    puts "Failed to create photo #{title}."
   end
 end
 
 # Seed data with Cloudinary keys
-create_photo('Photo 1', 'mettre une description ici', 'pro', 'image_1_jzttep')
-create_photo('Photo 2', 'mettre une description ici', 'pro', 'image_2_nsjuyy')
-create_photo('Photo 3', 'mettre une description ici', 'pro', 'image_3_wtjqg3')
+create_photo('Photo 1', 'Mettre une description ici', 'pro', 'image_1_jzttep')
+create_photo('Photo 2', 'Mettre une description ici', 'pro', 'image_2_nsjuyy')
+create_photo('Photo 3', 'Mettre une description ici', 'pro', 'image_3_wtjqg3')
 
 puts 'Photos created successfully!'

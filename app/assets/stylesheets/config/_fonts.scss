@@ -50,8 +50,15 @@ strong {
   font-family: var(--framer-font-family-bold-italic);
 }
 
+.image-description {
+  --framer-text-transform: none;
+  padding: 10px 0 30px 0;
+  font-weight: 100;
+  color: #888282 !important;
+}
+
 // Apply "Messina Sans Web Light" to navbar and specific titles
-.navbar, .navbar-title, h2.title-special {
+.navbar, .navbar-title, h2.title-special, .image-description {
   font-family: var(--framer-font-family-messina);
   font-size: var(--framer-font-size);
   font-weight: var(--framer-font-weight);

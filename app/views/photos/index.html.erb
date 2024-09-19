@@ -1,16 +1,16 @@
-<div>
-  <!-- Centered H1 at the top -->
-  <div class="row">
-    <div class="col-12 text-center">
-      <h1>
-        HANLU GONG
-      </h1>
-    </div>
-  </div>
+<h1 class="text-center">
+  HANLU GONG
+</h1>
 
-  <!-- Images below the H1 -->
-  <div class="row justify-content-center align-items-center">
-    <div class="col-md-6 home-image-container">
-    </div>
+
+<!-- Images below the H1 -->
+<div class="row justify-content-center align-items-center">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-4 home-image-container">
+    <% @photos.each do |photo| %>
+      <%= image_tag photo.image %>
+      <div class="image-description">
+        <%= photo.description %>
+      </div>
+    <% end %>
   </div>
 </div>
