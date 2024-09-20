@@ -2,14 +2,14 @@
   HANLU GONG
 </h1>
 
-
-<!-- Images below the H1 -->
-<div class="row justify-content-center align-items-center">
-  <div class="col-12 col-sm-6 col-md-6 col-lg-4 home-image-container">
+<div class="mx-3">
+  <div class="row justify-content-center">
     <% @photos.each do |photo| %>
-      <%= image_tag photo.image %>
-      <div class="image-description">
-        <%= photo.description %>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
+        <%= image_tag photo.image, class: "img-fluid" %> <!-- img-fluid makes the image responsive -->
+        <div class="image-description">
+          <%= photo.description %>
+        </div>
       </div>
     <% end %>
   </div>
